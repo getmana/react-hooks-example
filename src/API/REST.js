@@ -4,7 +4,7 @@ import { Config } from './config';
 export const api = new class Api extends Config {
     async getCountries(filter = '', size = '50') {
         const response = await fetch(
-            `${this.MAIN_URI}/geo/api/countries?filter=${filter}&size=${size}`,
+            `${this.MAIN_URI}/geo/api/countries?filter=${filter}&size=${size}&case-insensitive=true`,
             { method: 'GET' },
         );
 
